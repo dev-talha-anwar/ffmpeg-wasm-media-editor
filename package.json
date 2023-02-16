@@ -1,6 +1,6 @@
 {
   "name": "@dev-talha-anwar/ffmpeg-wasm-media-editor",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A Simple Javascript library for web media editing using ffmpeg.wasm.",
   "main": "dist/ffmpeg-wasm-media-editor.cjs.js",
   "module": "dist/ffmpeg-wasm-media-editor.esm.js",
@@ -26,5 +26,8 @@
   ],
   "dependencies": {
     "@ffmpeg/ffmpeg": "^0.11.6"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
