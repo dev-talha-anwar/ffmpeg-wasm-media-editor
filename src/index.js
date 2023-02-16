@@ -2,15 +2,15 @@ import { createFFmpeg, fetchFile } from '@ffmpeg/ffmpeg';
 
 export default class FFMPEGWasmMediaEditor {
 
-  constructor(corePath, progressCallback = null, log = false) {
+  constructor(corePath, progressCallback = null, log = false, fontFilePaths = [ '/font.ttf' ], stickerFilePaths = [ '/logo.png' ], filters = [ "hue=h=-60", "hue=h=0", "hue=h=60", "hue=h=120", "hue=h=180", "hue=h=240" ] ) {
     this.ffmpeg = createFFmpeg({
       log: log,
       ...( corePath && { corePath : corePath} ),
       ...( progressCallback && { progress : progressCallback} )
     });
-    this.fonts = [ '/font.ttf' ];
-    this.stickers = [ '/logo.png' ];
-    this.filters = [ "hue=h=-60", "hue=h=0", "hue=h=60", "hue=h=120", "hue=h=180", "hue=h=240" ];
+    this.fonts = fontFilePaths;
+    this.stickers = stickerFilePaths;
+    this.filters = filters;
     this.layers = [];
     this.layerTypes = {
       Image: 'image',

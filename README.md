@@ -29,8 +29,14 @@ import FFMPEGWasmMediaEditor from "@dev-talha-anwar/ffmpeg-wasm-media-editor";
 })();
 ```
 
-## Important Note 
-1. you must set following headers in order to use this package
-    Cross-Origin-Opener-Policy =  same-origin
-    Cross-Origin-Embedder-Policy = require-corp
-2. you must host ffmpeg core files to you domain and pass the path in constructor
+**Note: Following Steps Are Important**
+
+### Headers
+you must set following headers in order to use this package \
+Cross-Origin-Opener-Policy =  same-origin \
+Cross-Origin-Embedder-Policy = require-corp \
+
+
+### FFMPEG core files
+you must host ffmpeg core files to you domain and pass the path in constructor (ffmpeg-core version 0.9.0) \
+you must upload all your assets files (fonts,stickers) on the same domain 
