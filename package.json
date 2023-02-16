@@ -1,6 +1,6 @@
 {
   "name": "@dev-talha-anwar/ffmpeg-wasm-media-editor",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A Simple Javascript library for web media editing using ffmpeg.wasm.",
   "main": "src/index.js",
   "scripts": {
