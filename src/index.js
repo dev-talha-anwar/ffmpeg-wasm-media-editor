@@ -2,7 +2,7 @@ import { createFFmpeg, fetchFile } from '@ffmpeg/ffmpeg';
 
 export default class FFMPEGWasmMediaEditor {
 
-  constructor(progressCallback = null, log = false, corePath = undefined) {
+  constructor(corePath, progressCallback = null, log = false) {
     this.ffmpeg = createFFmpeg({
       log: log,
       ...( corePath && { corePath : corePath} ),
