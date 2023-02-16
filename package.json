@@ -2,26 +2,14 @@
   "name": "@dev-talha-anwar/ffmpeg-wasm-media-editor",
   "version": "1.0.1",
   "description": "A Simple Javascript library for web media editing using ffmpeg.wasm.",
-  "main": "dist/ffmpeg-wasm-media-editor.cjs.js",
-  "module": "dist/ffmpeg-wasm-media-editor.esm.js",
-  "browser": "dist/ffmpeg-wasm-media-editor.umd.js",
+  "main": "src/index.js",
   "scripts": {
-    "build": "rollup -c",
-    "test": "node test/spec",
-    "pretest": "npm run build",
     "release": "release-it"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "release-it": "^15.6.0",
-    "rollup": "^2.36.0",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "release-it": "^15.6.0"
   },
   "files": [
-    "dist",
     "src"
   ],
   "dependencies": {
