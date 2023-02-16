@@ -13,7 +13,7 @@
     "src"
   ],
   "dependencies": {
-    "@ffmpeg/ffmpeg": "^0.11.6"
+    "@ffmpeg/ffmpeg": "0.9.3"
   },
   "publishConfig": {
     "access": "public"
