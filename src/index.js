@@ -4,6 +4,7 @@ export default class FFMPEGWasmMediaEditor {
 
   constructor(progressCallback = null, log = false) {
     this.ffmpeg = createFFmpeg({
+      corePath: 'https://unpkg.com/@ffmpeg/core@0.11.6/dist/ffmpeg-core.js',
       log: log,
       ...( progressCallback && { progress : progressCallback} )
     });
