@@ -2,9 +2,10 @@ import { createFFmpeg, fetchFile } from '@ffmpeg/ffmpeg';
 
 export default class FFMPEGWasmMediaEditor {
 
-  constructor(progressCallback = null, log = false) {
+  constructor(progressCallback = null, log = false, corePath = undefined) {
     this.ffmpeg = createFFmpeg({
       log: log,
+      ...( corePath && { corePath : corePath} ),
       ...( progressCallback && { progress : progressCallback} )
     });
     this.fonts = [ '/font.ttf' ];
