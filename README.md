@@ -27,9 +27,24 @@ module.exports = (app) => {
 
 ```
 
+**For NextJs**
+copy following code in your page to set server side headers or you can add this code in pages/index.js file in bottom.
+```javascript
+export async function getServerSideProps(context) {
+  // set HTTP header
+  context.res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
+  context.res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
+  console.log({ isSecureContext: context });
+  return {
+    props: {}
+  };
+}
+
+```
+
 
 ### FFMPEG core files
-you must host ffmpeg core files to you domain and pass the path in constructor (ffmpeg-core version 0.9.0) \
+you must host ffmpeg core files to you domain and pass the path of ffmpeg-core.js in constructor (core files are provided in the core directory of the library) \
 you must upload all your assets files (fonts,stickers) on the same domain and provide path in constructor
 
 ## Usage
@@ -41,7 +56,7 @@ import FFMPEGWasmMediaEditor from "@dev-talha-anwar/ffmpeg-wasm-media-editor";
 
 (async () => {
     let editor = await new FFMPEGWasmMediaEditor(
-      'http://localhost:3000/dist/ffmpeg-core.js', 
+      'http://localhost:3000/core/ffmpeg-core.js', 
       p => console.log(p),
       true,[
         'http://localhost:3000/fonts/font.ttf', 
