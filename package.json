@@ -3,6 +3,7 @@
   "version": "1.0.10",
   "description": "A Simple Javascript library for web media editing using ffmpeg.wasm.",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "release": "release-it"
   },
