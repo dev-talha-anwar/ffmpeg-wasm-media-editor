@@ -34,11 +34,9 @@ export default class FFMPEGWasmMediaEditor {
   }
 
   async init( inputFile, fileName){
-    if(!this.ffmpeg.isLoaded){
-      console.log('Loading ffmpeg-core.js');
-      await this.ffmpeg.load();
-      console.log('Loading Input File');
-    }
+    console.log('Loading ffmpeg-core.js');
+    await this.ffmpeg.load();
+    console.log('Loading Input File');
     this.inputFile = inputFile;
     this.fileName = fileName;
     this.ffmpeg.FS('writeFile', fileName, await fetchFile(inputFile));
