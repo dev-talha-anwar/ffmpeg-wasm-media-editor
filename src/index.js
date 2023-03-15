@@ -238,16 +238,9 @@ export default class FFMPEGWasmMediaEditor {
     if(!this.inputFile || !this.isRun){
       console.error('Something Went Wrong.')
     }else{
-      return this.ffmpeg.FS('readFile', this.outputFile);
-    }
-  }
-
-  destroy(){
-    if(this.ffmpeg.isLoaded()){
+      let file = this.ffmpeg.FS('readFile', this.outputFile);
       this.ffmpeg.exit();
-      return true;
-    }else{
-      console.error('Not Loaded.')
+      return file;
     }
   }
 
