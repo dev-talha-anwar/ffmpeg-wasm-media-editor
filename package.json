@@ -30,5 +30,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dev-talha-anwar/ffmpeg-wasm-media-editor.git"
+  },
+  "homepage": "https://github.com/dev-talha-anwar/ffmpeg-wasm-media-editor#readme"
 }
