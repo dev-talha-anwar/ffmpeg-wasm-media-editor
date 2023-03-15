@@ -239,7 +239,7 @@ export default class FFMPEGWasmMediaEditor {
       console.error('Something Went Wrong.')
     }else{
       let file = this.ffmpeg.FS('readFile', this.outputFile);
-      this.ffmpeg.exit();
+      // this.ffmpeg.exit();
       return file;
     }
   }
