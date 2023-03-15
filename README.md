@@ -75,6 +75,7 @@ import FFMPEGWasmMediaEditor from "@dev-talha-anwar/ffmpeg-wasm-media-editor";
     await editor.run();
     const data = await editor.getOutput();
     console.log(data);
+    editor.destroy();
 })();
 ```
 

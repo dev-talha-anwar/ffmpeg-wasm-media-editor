@@ -242,6 +242,15 @@ export default class FFMPEGWasmMediaEditor {
     }
   }
 
+  destroy(){
+    if(this.ffmpeg.isLoaded()){
+      this.ffmpeg.exit();
+      return true;
+    }else{
+      console.error('Not Loaded.')
+    }
+  }
+
   getPositionObject(width, height, horizontalStart, verticalStart){
     return {
       width: width,
