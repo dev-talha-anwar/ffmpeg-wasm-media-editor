@@ -28,17 +28,25 @@ module.exports = (app) => {
 ```
 
 **For NextJs**
-copy following code in your page to set server side headers or you can add this code in pages/index.js file in bottom.
+copy following code in your page to set server side headers or you can add this code in next.config.js file.
 ```javascript
-export async function getServerSideProps(context) {
-  // set HTTP header
-  context.res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
-  context.res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
-  console.log({ isSecureContext: context });
-  return {
-    props: {}
-  };
-}
+async headers() {
+    return [
+      {
+        source: '/',
+        headers: [
+          {
+            key: 'Cross-Origin-Embedder-Policy',
+            value: 'require-corp',
+          },
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'same-origin',
+          },
+        ],
+      },
+    ]
+  }
 
 ```
 
@@ -75,7 +83,6 @@ import FFMPEGWasmMediaEditor from "@dev-talha-anwar/ffmpeg-wasm-media-editor";
     await editor.run();
     const data = await editor.getOutput();
     console.log(data);
-    editor.destroy();
 })();
 ```
 
